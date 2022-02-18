@@ -15,3 +15,26 @@ function sumTo(n) {
   
   console.log( sumTo(4) );
   console.log( sumTo(3) );
+
+
+// 2. Написать функцию findShort , которая будет находит самое короткое слово в предложении. В случае если длина двух слов совпадает - вернуть первое найденое короткое слово. Пример работы функции:
+
+// const sentance = "Lorem ipsum dolor sit amet";
+
+// console.log(findShort(sentance)); // sit
+// console.log(findShort("Hello world"); // Hello
+// console.log(findShort("Hi"); // Hi
+// console.log(findShort("She is David's sister"); // is
+
+
+const sentance = "Lorem ipsum dolor sit amet";
+
+function findShort(string) {
+    const words = string.split(" ");
+    return words.sort((a, b) => a.length - b.length)[0];
+  }
+
+console.log(findShort(sentance)); // sit
+console.log(findShort("Hello world")); 
+console.log(findShort("Hi"));
+console.log(findShort("She is David's sister")); 
